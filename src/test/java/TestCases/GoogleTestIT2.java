@@ -1,3 +1,4 @@
+package TestCases;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -12,7 +13,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
-public class GoogleTestIT {
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class GoogleTestIT2 {
 
 	static WebDriver driver;
 
@@ -23,22 +26,12 @@ public class GoogleTestIT {
 		System.out.println("Project Path :: " + projectPath);
 		String url ="https://www.google.com/?gws_rd=ssl";
 		System.out.println("Before URL");
-		System.setProperty("webdriver.chrome.driver","./Driver/Chrome/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","./Driver/Chrome/chromedriver.exe");
 
-		//	WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().setup();
 
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		options.addArguments("--disable-extensions");
-		options.addArguments("--proxy-server='direct://'");
-		options.addArguments("--proxy-bypass-list=*");
-		options.addArguments("--start-maximized");
-		options.addArguments("---disable-gpu");
-		options.addArguments("--disable-dev-shm-usage");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--ignore-certificate-errors");
-		options.addArguments("--allow-running-insecure-content");
-		driver = new ChromeDriver(options);
+
+		driver = new ChromeDriver();
 		ScreenShot("a1");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
