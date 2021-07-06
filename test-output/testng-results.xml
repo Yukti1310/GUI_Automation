@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-06T11:24:15 IST" name="Default suite" finished-at="2021-07-06T11:24:27 IST" duration-ms="11758">
+    <groups>
+    </groups>
+    <test started-at="2021-07-06T11:24:15 IST" name="Default test" finished-at="2021-07-06T11:24:27 IST" duration-ms="11758">
+      <class name="GoogleTestIT">
+        <test-method signature="i_have_the_Chrome()[pri:0, instance:GoogleTestIT@1bb266b3]" started-at="2021-07-06T11:24:15 IST" name="i_have_the_Chrome" finished-at="2021-07-06T11:24:27 IST" duration-ms="11627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- i_have_the_Chrome -->
+      </class> <!-- GoogleTestIT -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
